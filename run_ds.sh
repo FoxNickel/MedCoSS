@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# 下游任务, 一堆任务用一个脚本跑的
 gpu_id=1
 
 task_id='1D_PubMed'

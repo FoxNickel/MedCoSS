@@ -129,7 +129,7 @@ def make_one_hot(input, num_classes):
 def main():
     """Create the model and start the training."""
     parser = get_arguments()
-    print(parser)
+    print(f"HLY: parser = {parser}")
     # os.environ["CUDA_VISIBLE_DEVICES"] = '0'
     os.environ["OMP_NUM_THREADS"] = "1"
 
@@ -243,7 +243,8 @@ def main():
 
                 epoch_loss.append(float(reduce_all))
 
-                if args.local_rank == 0 and (iter + 1) % 500 == 0:
+                print(f'HLY: local_rank = {args.local_rank}, iter + 1 = {iter + 1}')
+                if args.local_rank == 0 and (iter + 1) % 2 == 0:
                     model.eval()
                     model.cal_acc = True
                     pre_score = []
@@ -265,9 +266,11 @@ def main():
                     val_auc = metrics.roc_auc_score(label_val, pre_score, average='macro', multi_class="ovo")
                     val_f1 = metrics.f1_score(label_val, np.argmax(pre_score, axis=-1), average='macro')
 
+                    print(f'HLY: train')
                     model.train()
                     model.cal_acc = False
                     epoch_acc_mean = np.mean(epoch_acc)
+                    print(f'HLY: best_acc = {best_acc}, epoch_acc_mean = {epoch_acc_mean}, val_auc = {val_auc}, val_f1 = {val_f1}')
                     if best_acc < (epoch_acc_mean + val_auc + val_f1):
                         best_acc = epoch_acc_mean + val_auc + val_f1
                         print(f"save best weight: acc:{epoch_acc_mean}, auc: {val_auc}, f1: {val_f1}")
