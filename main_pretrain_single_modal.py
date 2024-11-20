@@ -36,6 +36,10 @@ from dataloader.TCGA_dataset import TCGA_Image_Dataset
 from model.Unimodel import Unified_Model
 from engine_pretrain import train_one_epoch
 
+from log_util import LogUtil
+logger = LogUtil.get_logger("main_pretrain_single_modal")
+
+# 单模态训练脚本
 
 def get_args_parser():
     parser = argparse.ArgumentParser('MAE pre-training', add_help=False)
@@ -248,6 +252,7 @@ def main(args):
 if __name__ == '__main__':
     args = get_args_parser()
     args = args.parse_args()
+    logger.debug(f'args = {args}')
     if args.output_dir:
         Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     if misc.is_main_process():

@@ -1,0 +1,48 @@
+
+****************** 2024-11-20 14:03:03,162 - main_pretrain_single_modal - DEBUG ******************
+args = Namespace(accum_iter=1, batch_size=128, blr=0.00015, data_path='./data/ssl/PubMed/pubmed-rct/mini/', device='cuda', dist_on_itp=False, dist_url='env://', epochs=300, input_size=224, load_current_pretrained_weight='./ckpt/uni-perceiver-base-L12-H768-224size-torch-pretrained.pth', local_rank=2, log_dir='./output_dir/1D_text_300', lr=None, mask_ratio=0.75, min_lr=0.0, model='unified_vit', norm_pix_loss=True, num_workers=10, output_dir='./output_dir/1D_text_300', pin_mem=True, resume='', seed=0, start_epoch=0, task_modality='1D_text', warmup_epochs=40, weight_decay=0.05, world_size=1)
+
+
+****************** 2024-11-20 14:03:03,166 - main_pretrain_single_modal - DEBUG ******************
+args = Namespace(accum_iter=1, batch_size=128, blr=0.00015, data_path='./data/ssl/PubMed/pubmed-rct/mini/', device='cuda', dist_on_itp=False, dist_url='env://', epochs=300, input_size=224, load_current_pretrained_weight='./ckpt/uni-perceiver-base-L12-H768-224size-torch-pretrained.pth', local_rank=1, log_dir='./output_dir/1D_text_300', lr=None, mask_ratio=0.75, min_lr=0.0, model='unified_vit', norm_pix_loss=True, num_workers=10, output_dir='./output_dir/1D_text_300', pin_mem=True, resume='', seed=0, start_epoch=0, task_modality='1D_text', warmup_epochs=40, weight_decay=0.05, world_size=1)
+
+
+****************** 2024-11-20 14:03:03,199 - main_pretrain_single_modal - DEBUG ******************
+args = Namespace(accum_iter=1, batch_size=128, blr=0.00015, data_path='./data/ssl/PubMed/pubmed-rct/mini/', device='cuda', dist_on_itp=False, dist_url='env://', epochs=300, input_size=224, load_current_pretrained_weight='./ckpt/uni-perceiver-base-L12-H768-224size-torch-pretrained.pth', local_rank=3, log_dir='./output_dir/1D_text_300', lr=None, mask_ratio=0.75, min_lr=0.0, model='unified_vit', norm_pix_loss=True, num_workers=10, output_dir='./output_dir/1D_text_300', pin_mem=True, resume='', seed=0, start_epoch=0, task_modality='1D_text', warmup_epochs=40, weight_decay=0.05, world_size=1)
+
+
+****************** 2024-11-20 14:03:03,202 - main_pretrain_single_modal - DEBUG ******************
+args = Namespace(accum_iter=1, batch_size=128, blr=0.00015, data_path='./data/ssl/PubMed/pubmed-rct/mini/', device='cuda', dist_on_itp=False, dist_url='env://', epochs=300, input_size=224, load_current_pretrained_weight='./ckpt/uni-perceiver-base-L12-H768-224size-torch-pretrained.pth', local_rank=0, log_dir='./output_dir/1D_text_300', lr=None, mask_ratio=0.75, min_lr=0.0, model='unified_vit', norm_pix_loss=True, num_workers=10, output_dir='./output_dir/1D_text_300', pin_mem=True, resume='', seed=0, start_epoch=0, task_modality='1D_text', warmup_epochs=40, weight_decay=0.05, world_size=1)
+
+
+****************** 2024-11-20 14:03:05,914 - torch.distributed.distributed_c10d - INFO ******************
+Added key: store_based_barrier_key:1 to store for rank: 0
+
+
+****************** 2024-11-20 14:03:05,966 - torch.distributed.distributed_c10d - INFO ******************
+Added key: store_based_barrier_key:1 to store for rank: 3
+
+
+****************** 2024-11-20 14:03:06,016 - torch.distributed.distributed_c10d - INFO ******************
+Added key: store_based_barrier_key:1 to store for rank: 1
+
+
+****************** 2024-11-20 14:03:06,062 - torch.distributed.distributed_c10d - INFO ******************
+Added key: store_based_barrier_key:1 to store for rank: 2
+
+
+****************** 2024-11-20 14:03:06,062 - torch.distributed.distributed_c10d - INFO ******************
+Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+
+
+****************** 2024-11-20 14:03:06,068 - torch.distributed.distributed_c10d - INFO ******************
+Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+
+
+****************** 2024-11-20 14:03:06,069 - torch.distributed.distributed_c10d - INFO ******************
+Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+
+
+****************** 2024-11-20 14:03:06,069 - torch.distributed.distributed_c10d - INFO ******************
+Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+

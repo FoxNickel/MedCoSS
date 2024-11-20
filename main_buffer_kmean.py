@@ -40,6 +40,11 @@ import pandas as pd
 from sklearn.cluster import KMeans
 import json
 
+from log_util import LogUtil
+logger = LogUtil.get_logger("main_buffer_kmean")
+
+# k-means保留buffer
+
 def get_args_parser():
     parser = argparse.ArgumentParser('MAE pre-training', add_help=False)
 

@@ -20,6 +20,10 @@ from model.Unimodel import Unified_Model
 from model.Unimodel_Teacher import Teacher_Unified_Model
 from engine_pretrain_er import jointly_train_one_epoch_with_teacher
 
+from log_util import LogUtil
+logger = LogUtil.get_logger("main_pretrain_medcoss")
+
+# medcoss预训练脚本
 
 def get_args_parser():
     parser = argparse.ArgumentParser('MAE pre-training', add_help=False)
